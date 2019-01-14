@@ -4,9 +4,12 @@
 Files:
   1) mission_to_mars.ipynb: Contains the web-scraping code.
   2) mission_to_mars.py: converted .py file from jupyter notebook (1)
-  3) Resources/ : contains the saved html page and image corresponding to the Mars Hemispheres
-  4) templates/ : contains index.html
-  5) style.css : CSS stylesheets
-  6) app.py: Flask application
+  3) mission_to_mars_test.ipynb: <b>Please ignore</b>
   
-  Notes: Please ignore mission_to_mars_test.ipynb.
+  4) app.py: Flask application
+  5) templates/ : contains index.html
+  6) static/style/style.css : CSS stylesheets
+  7) static/Mars_Hemispheres.png: Saved image of the Mars Hemispheres
+  
+  
+  Notes: Please ignore mission_to_mars_test.ipynb and static/Mars_Hemispheres.webarchive
