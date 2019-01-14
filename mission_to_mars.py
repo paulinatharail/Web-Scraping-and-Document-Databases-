@@ -169,7 +169,7 @@ def mars_hemisphers():
         images.append(img_dict)
 
 
-    print (img_dict)    
+    return img_dict
 
 
 

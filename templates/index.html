@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       
+        <title>Mission to Mars</title>
+        
+        <!--Bootstrap stylesheets-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="style.css">-->
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+    </head>
+    <body>
+        
+
+        <!--main content-->
+        <div class="container">
+
+            <!--Jumbotron-->
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4" align="center">Mission to Mars</h1>
+                    <p><a class="btn btn-primary btn-lg center" href="/scrape" role="button">Scrape new data</a></p>
+                </div>
+            </div>
+
+            <!-- Mars news-->
+            <div class="mars-news">
+                <br><br>
+                <h2 class="mars-news-heading">Latest Mars News</h2>
+                <h4 class="mars-latest-news-subheading">{{listings['Mars_News']['Title']}}</h4>
+                <p class="mars-news-desc">{{listings['Mars_News']['Description']}} </p>
+                <br><br>
+            </div>
+
+            <!-- Mars image-->
+            <div class="mars-image">
+                <br><br>
+                <h2 class="mars-featured-img">Featured Mars Image</h2>
+                <div class="mars-featured-img test">
+                    <a href="{{listings['Featured_Image']}} test">
+                        <img src="{{listings['Featured_Image']}}" class="test">
+                    </a>
+                </div>
+                <br><br>
+            </div>
+
+            <!--Mars Hemispheres-->
+            <div class="mars-hems">
+                <br><br>
+                <h2 class="mars-hemisphere-img">Mars Hemispheres</h2>
+                <!--put the featured image image-->
+                <div><img src=""></div>
+                <br><br>
+            </div>
+    
+            <!-- Mars Facts-->
+            <div class="mars-facts">
+                <br><br>
+                <h2 class="mars-facts-heading">Mars Facts</h2>
+                <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Facts</th>
+                            <th scope="col">Measurements</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>{{listings['Mars_Facts'][0]['Facts']}}</td>
+                            <td>{{listings['Mars_Facts'][0]['Measurements']}}</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>{{listings['Mars_Facts'][1]['Facts']}}</td>
+                            <td>{{listings['Mars_Facts'][1]['Measurements']}}</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>{{listings['Mars_Facts'][2]['Facts']}}</td>
+                            <td>{{listings['Mars_Facts'][2]['Measurements']}}</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>{{listings['Mars_Facts'][3]['Facts']}}</td>
+                            <td>{{listings['Mars_Facts'][3]['Measurements']}}</td>
+                          </tr>
+                          <tr>
+                             <th scope="row">5</th>
+                             <td>{{listings['Mars_Facts'][4]['Facts']}}</td>
+                             <td>{{listings['Mars_Facts'][4]['Measurements']}}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+            </div>
+
+
+        </div>
+    </body>
+
+
+</html>

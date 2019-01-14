@@ -1,0 +1,8 @@
+.center{
+    vertical-align: center;
+    align-self: center;
+    margin-left: 50px;
+}
+.test{
+    border: solid red 2px;
+}
