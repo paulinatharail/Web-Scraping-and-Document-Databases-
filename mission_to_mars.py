@@ -144,29 +144,30 @@ def mars_hemisphers():
     
 
     # Access the locally saved Gitlab page to get the Mars Hemisphere pictures
-    filepath = os.path.join("Resources", "02-Homework_12-Web-Scraping-and-Document-Databases_Instructions · master · UCSD-Coding-Bootcamp _ UCSD201809DATA4 · GitLab.htm")
-    with open(filepath) as file:
-        html = file.read()
+    filepath = os.path.join("static", "Mars_Hemispheres.png")
 
-    #create a Beautiful Soup objet
-    soup = BeautifulSoup(html, 'lxml')
+    # with open(filepath) as file:
+    #     html = file.read()
 
-    #Extract images
-    images = []
+    # #create a Beautiful Soup objet
+    # soup = BeautifulSoup(html, 'lxml')
 
-    imgs = soup.find_all('a', class_="no-attachment-icon")
-    for image in imgs:
+    # #Extract images
+    # images = []
+
+    # imgs = soup.find_all('a', class_="no-attachment-icon")
+    # for image in imgs:
 
     #    print(image)
     #    print(image.img["alt"])
-        img_url = image["href"]
-        img_title = image.img["alt"]
+    img_url = filepath
+    img_title = "Mars Hemispheres"
 
-        img_dict = {'url':img_url,
-                   'title':img_title
+    img_dict = {'url':img_url,
+                'title':img_title
                 }
 
-        images.append(img_dict)
+    #images.append(img_dict)
 
 
     return img_dict

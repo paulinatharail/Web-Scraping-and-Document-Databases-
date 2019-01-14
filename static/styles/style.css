@@ -1,0 +1,22 @@
+.centered{
+    vertical-align: center;
+    align-items: center;
+    /* margin-left: 50px; */
+    text-align: center;
+}
+.test{
+    border: solid red 2px;
+}
+
+.display-4{
+    color:blue;
+}
+
+
+.mars-hemi{
+    size: 75%;
+}
+
+.mars-featured-img{
+    size: 100%;
+}

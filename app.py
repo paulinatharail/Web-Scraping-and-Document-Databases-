@@ -1,6 +1,8 @@
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
+import os
 import mission_to_mars
+
 
 app = Flask(__name__)
 
@@ -30,6 +32,12 @@ def scraper():
     # Assign results of web-scraping to variable mars_data 
     mars_data = mission_to_mars.scrape()
     #mongo.db.info.insert_one(mars_data)
+
+    app.config['MARS_hems'] = mars_data['Mars_Hemispheres']['url']
+    #full_filename = os.path.join(app.config['MARS_hems'],'Mars_Hemispheres.png')
+    full_filename = os.path.join(app.config['MARS_hems'])
+
+    mars_data['Flask_Mars_Hems_URL'] = full_filename
 
     mars_info_before.update({}, mars_data, upsert=True)
     return redirect("/", code=302)

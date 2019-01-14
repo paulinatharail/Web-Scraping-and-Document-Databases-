@@ -10,7 +10,9 @@
         
         <!--Bootstrap stylesheets-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!--<link rel="stylesheet" href="style.css">-->
+        <!--<link rel="stylesheet" href="../style.css">-->
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -28,11 +30,10 @@
         <div class="container">
 
             <!--Jumbotron-->
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-4" align="center">Mission to Mars</h1>
-                    <p><a class="btn btn-primary btn-lg center" href="/scrape" role="button">Scrape new data</a></p>
-                </div>
+            <div class="jumbotron jumbotron-fluid centered">
+                <h1 class="display-4" >Mission to Mars</h1>
+                 <p><a class="btn btn-primary btn-lg center" href="/scrape" role="button">Scrape new data</a></p>
+                
             </div>
 
             <!-- Mars news-->
@@ -48,9 +49,9 @@
             <div class="mars-image">
                 <br><br>
                 <h2 class="mars-featured-img">Featured Mars Image</h2>
-                <div class="mars-featured-img test">
+                <div class="mars-featured-img">
                     <a href="{{listings['Featured_Image']}} test">
-                        <img src="{{listings['Featured_Image']}}" class="test">
+                        <img src="{{listings['Featured_Image']}}">
                     </a>
                 </div>
                 <br><br>
@@ -60,8 +61,8 @@
             <div class="mars-hems">
                 <br><br>
                 <h2 class="mars-hemisphere-img">Mars Hemispheres</h2>
-                <!--put the featured image image-->
-                <div><img src=""></div>
+                <!--display the featured image image-->
+                <div><img class="mars-hemi-img" src="{{listings['Flask_Mars_Hems_URL']}}">  </div>
                 <br><br>
             </div>
     
